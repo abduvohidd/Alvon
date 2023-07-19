@@ -73,12 +73,11 @@ const handleForm = () => {
 
                 <input
                   type="text"
-                  name="text"
                   id="text"
                   v-model="text"
                   required
                   placeholder="Ismingiz"
-                  class="w-full py-3 outline-none bg-transparent"
+                  class="w-full py-3 outline-none bg-transparent rounded-full"
                 />
               </div>
             </div>
@@ -112,7 +111,7 @@ const handleForm = () => {
                   v-model="phone"
                   id="phone"
                   placeholder="Telefon raqamingiz"
-                  class="w-full py-3 outline-none bg-transparent"
+                  class="w-full py-3 outline-none bg-transparent rounded-full"
                 />
               </div>
             </div>
@@ -140,13 +139,14 @@ const handleForm = () => {
                 </span>
 
                 <input
+                  enabled
                   type="lesson"
                   name="lesson"
                   required
                   v-model="lesson"
                   id="lesson"
                   placeholder="Qiziqqan faniggiz"
-                  class="w-full py-3 outline-none bg-transparent"
+                  class="w-full py-3 outline-none bg-transparent rounded-full"
                 />
               </div>
             </div>
@@ -179,4 +179,9 @@ const handleForm = () => {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+input:focus {
+  background-color: none !important;
+  -webkit-appearance: none;
+}
+</style>
