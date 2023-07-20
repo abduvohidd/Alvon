@@ -89,7 +89,7 @@ const handleForm = () => {
                   v-model="text"
                   required
                   placeholder="Ismingiz"
-                  class="w-full py-3 outline-none bg-transparent rounded-full"
+                  class="w-full py-3 outline-none rounded-full bg-box-bg"
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ const handleForm = () => {
                   v-model="phone"
                   id="phone"
                   placeholder="Telefon raqamingiz"
-                  class="w-full py-3 outline-none bg-transparent rounded-full"
+                  class="w-full py-3 outline-none bg-box-bg rounded-full"
                 />
               </div>
             </div>
@@ -155,7 +155,7 @@ const handleForm = () => {
                   required
                   v-model="value"
                   :options="lessons"
-                  class="bg-transparent dark:text-[#b2b2b2] text-black h-full rounded-full w-[100%] z-50 py-1 border border-transparent"
+                  class="bg-box-bg dark:text-white text-black h-full rounded-full w-[100%] z-50 py-1 bg-none border-none"
                 />
               </div>
             </div>
@@ -188,7 +188,26 @@ const handleForm = () => {
   </div>
 </template>
 
-<style scoped>
+<style>
+.multiselect {
+  background: none !important;
+  border-radius: inherit !important;
+  z-index: 100% !important;
+  border: none !important;
+}
+.multiselect .multiselect-dropdown {
+  background-color: rgb(var(--color-box));
+  border-radius: 8px !important ;
+  border: transparent !important;
+  margin-top: 5rem !important;
+  border: none !important;
+}
+.multiselect .multiselect-fake-input {
+  background: transparent !important;
+  border-radius: 8px !important;
+  border: none !important;
+  z-index: 100% !important;
+}
 input:focus {
   background-color: none !important;
   -webkit-appearance: none;
