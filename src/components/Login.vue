@@ -3,24 +3,34 @@ import axios from "axios";
 import { ref } from "vue";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
+import Multiselect from "@vueform/multiselect";
+import "@vueform/multiselect/themes/default.css";
 
 const text = ref("");
 const phone = ref("");
-const lesson = ref("");
+const value = ref(null);
+const lessons = ref([
+  "Matematika",
+  "Ingilis Tili",
+  "Arab Tili",
+  "Rus Tili",
+  "Maktabgacha tayyo'rlov darslari",
+  "Arab tili kids",
+]);
 
 const handleForm = () => {
   axios.post(
     "https://api.telegram.org/bot6350411149:AAFouN9lI1qD5AhHEGKfhamHHm_3EzmzQ2A/sendMessage",
     {
       chat_id: -1001989077847,
-      text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${lesson.value}`,
+      text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${value.value}`,
       parse_mode: "HTML",
     }
   );
 
   text.value = undefined;
   phone.value = undefined;
-  lesson.value = undefined;
+  value.value = undefined;
 
   toast.success("Xabaringiz yuborildi tez orada siz bilan bo'g'lanishadi.", {
     autoClose: 5000,
@@ -34,13 +44,15 @@ const handleForm = () => {
     id="login"
   >
     <div class="mt-10 w-full flex mx-auto lg:mx-0">
-      <div class="flex sm:flex-row flex-col gap-5 w-full">
+      <div
+        class="flex sm:flex-row flex-col gap-5 w-full lg:h-[400px] sm:h-full h-[600px]"
+      >
         <form
           @submit.prevent="handleForm"
           class="py-1 pl-6 w-full flex-col pr-6 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-lg ease-linear focus-within:bg-body focus-within:border-primary"
         >
           <h1
-            class="mt-5 text-2xl/tight text-center sm:text-4xl/tight md:text-4xl/tight xl:text-5xl/tight font-bold text-heading-1"
+            class="mt-10 text-2xl/tight text-center sm:text-4xl/tight md:text-4xl/tight xl:text-5xl/tight font-bold text-heading-1"
           >
             O’zbekistondagi Sifatli Ta’lim markazi!
           </h1>
@@ -48,7 +60,7 @@ const handleForm = () => {
             O'quv markazimizga siz ham qo’shiling va biz bilan yuqori
             natijalarga erishing!
           </p>
-          <div class="flex sm:flex-row flex-col gap-6 mt-3">
+          <div class="flex lg:flex-row flex-col gap-6 mt-5 sm:w-[80%] w-[100%]">
             <div class="flex items-center sm:flex-row gap-4 w-full">
               <div
                 class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
@@ -138,22 +150,19 @@ const handleForm = () => {
                   </svg>
                 </span>
 
-                <input
-                  enabled
-                  type="lesson"
-                  name="lesson"
-                  required
-                  v-model="lesson"
-                  id="lesson"
+                <Multiselect
                   placeholder="Qiziqqan faningiz"
-                  class="w-full py-3 outline-none bg-transparent rounded-full"
+                  required
+                  v-model="value"
+                  :options="lessons"
+                  class="bg-transparent dark:text-[#b2b2b2] text-black h-full rounded-full w-[100%] z-50 py-1 border border-transparent"
                 />
               </div>
             </div>
           </div>
           <button
             type="submit"
-            class="px-6 py-3 mt-5 mb-5 w-[60%] sm:w-[35%] md:w-[25%] flex justify-center rounded-full bg-[#1d4ed8] outline-none overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 hover:after:opacity-100 hover:after:scale-[2.5] border-transparent relative after:bg-orange-500 hover:border-orange-500"
+            class="px-6 py-3 mt-10 mb-5 w-[60%] sm:w-[35%] md:w-[25%] flex justify-center rounded-full bg-[#1d4ed8] outline-none overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 hover:after:opacity-100 hover:after:scale-[2.5] border-transparent relative after:bg-orange-500 hover:border-orange-500"
           >
             <span class="flex relative z-[5] text-white"> Yuborish </span>
             <!-- <span class="flex sm:hidden relative z-[5]">
