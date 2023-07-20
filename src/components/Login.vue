@@ -145,7 +145,7 @@ const handleForm = () => {
                   required
                   v-model="lesson"
                   id="lesson"
-                  placeholder="Qiziqqan faniggiz"
+                  placeholder="Qiziqqan faningiz"
                   class="w-full py-3 outline-none bg-transparent rounded-full"
                 />
               </div>
