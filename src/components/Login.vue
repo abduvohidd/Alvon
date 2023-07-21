@@ -87,9 +87,10 @@ const handleForm = () => {
                   type="text"
                   id="text"
                   v-model="text"
+                  autocomplete="off"
                   required
                   placeholder="Ismingiz"
-                  class="w-full py-3 outline-none rounded-full bg-box-bg"
+                  class="w-full py-3 outline-none rounded-full bg-box-bg pl-2"
                 />
               </div>
             </div>
@@ -120,10 +121,11 @@ const handleForm = () => {
                   type="phone"
                   name="phone"
                   required
+                  autocomplete="off"
                   v-model="phone"
                   id="phone"
                   placeholder="Telefon raqamingiz"
-                  class="w-full py-3 outline-none bg-box-bg rounded-full"
+                  class="w-full py-3 outline-none bg-box-bg rounded-full pl-2"
                 />
               </div>
             </div>
@@ -201,6 +203,13 @@ const handleForm = () => {
   border: transparent !important;
   margin-top: 5rem !important;
   border: none !important;
+  /* top: 30px; */
+  bottom: -10px;
+  height: 10rem;
+}
+
+.multiselect .multiselect-dropdown::-webkit-scrollbar {
+  width: 0;
 }
 .multiselect .multiselect-fake-input {
   background: transparent !important;
