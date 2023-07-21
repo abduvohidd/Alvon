@@ -5,9 +5,10 @@ import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 import Multiselect from "@vueform/multiselect";
 import "@vueform/multiselect/themes/default.css";
+import { vMaska } from "maska";
 
 const text = ref("");
-const phone = ref("");
+const phone = ref("+998");
 const value = ref(null);
 const lessons = ref([
   "Matematika",
@@ -29,7 +30,7 @@ const handleForm = () => {
   );
 
   text.value = undefined;
-  phone.value = undefined;
+  phone.value = "+998";
   value.value = undefined;
 
   toast.success("Xabaringiz yuborildi tez orada siz bilan bo'g'lanishadi.", {
@@ -122,6 +123,8 @@ const handleForm = () => {
                   name="phone"
                   required
                   autocomplete="off"
+                  v-maska
+                  data-maska="+998 (##) ###-##-##"
                   v-model="phone"
                   id="phone"
                   placeholder="Telefon raqamingiz"
