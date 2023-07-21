@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/shared/Container.astro";
+import Title from "../components/shared/Title.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+---
+
+<Layout title="Arabic Kids Language">
+  <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+    <section id="arabic-kids">
+      <Container className="space-y-8 pt-32 lg:pt-36 !pr-0">
+        <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
+          <span
+            class="absolute -left-6 md:left-[18rem] top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+          ></span>
+        </div>
+        <span
+          class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
+        ></span>
+        <div class="text-center max-w-4xl mx-auto">
+          <Title>Arabic kids language</Title>
+
+          <Paragraph className="mt-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+            vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
+            massa.
+          </Paragraph>
+
+          <img
+            src="/images/hero-5.jpg"
+            alt="not found image"
+            class="mt-5 rounded-lg"
+          />
+
+          <Paragraph className="mt-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+            vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
+            massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+            vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
+            massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+            vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
+            massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+            vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
+            massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+            vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
+            massa.
+          </Paragraph>
+        </div>
+      </Container>
+    </section>
+  </main>
+</Layout>
