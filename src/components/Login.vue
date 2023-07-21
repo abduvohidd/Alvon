@@ -17,6 +17,9 @@ const lessons = ref([
   "Rus Tili",
   "Maktabgacha tayyo'rlov darslari",
   "Arab tili kids",
+  "IT",
+  "Mental arifmetika",
+  "Med kurs",
 ]);
 
 const handleForm = () => {
