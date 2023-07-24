@@ -60,32 +60,35 @@ import { ref } from "vue";
 
 const items = ref([
   {
-    header: "O’quv markazingizda qanday sharoitlar bor ?",
-    content: "Content for Item 1",
+    header: "O’quv markazingizda qanday sharoitlar bor ? ",
+    content:
+      "Yorug' va keng xonalar, xonada zamonaviy proyektor va qular joylashuv bularning barchasi bizning alvon o'quv markazimizda...",
     active: false,
   },
   {
     header: "Darslar qanday metodlar yordamida o'tiladi ?",
-    content: "Content for Item 2",
+    content:
+      "“Kichik guruhlarda ishlash” metodi. Bu metodda ta’lim beruvchi tomonidan aniq ko‘rsatmalar beriladi kichik guruhlar esa topshiriqni bajarishga kirishadilar. Natijasi-muloqotga kirishish ko‘nikmasining takomillashishiga olib keladi. “Davra suhbati” metodi, bu metod berilgan muammo yoki savollar yuzasidan ta’lim oluvchilar tomonidan o‘z fikr-mulohazalarini bildirish orqali olib boriladigan o‘qitish metodidir.Natijasi -  ta’lim oluvchilar berilgan mavzu bo‘yicha o‘zlarining bilimlarini qisqa va aniq ifoda eta oladilar.",
     active: false,
   },
   {
-    header: "O'qiv markazilar qanday yutuqlarga erishgan ?",
-    content: "Content for Item 3",
+    header: "O'quv markazimiz qanday yutuqlarga erishgan ?",
+    content:
+      "Hozirgi yutuqlarimiz: Matematika fanidan 2022-yil OTM(Oliy ta'lim muassasasi)ga kirish imtihonlariga topshirgan 10 ta abituriyentimizdan 9 tasi talabalik baxtiga sazovor bo'lishgan, 90%lik natija. Arab tili kurslarimizdan 1000 dan ortiq bitiruvchilar chiqazilgani bular arab tili gramatikasi va arab tili fonetika yo'nalishlari bitiruvchilaridir.",
     active: false,
   },
   {
-    header: "O’quv markazingizda qanday sharoitlar bor ?",
+    header: " ?",
     content: "Content for Item 1",
     active: false,
   },
   {
-    header: "Darslar qanday metodlar yordamida o'tiladi ?",
+    header: " ?",
     content: "Content for Item 2",
     active: false,
   },
   {
-    header: "O'qiv markazilar qanday yutuqlarga erishgan ?",
+    header: " ?",
     content: "Content for Item 3",
     active: false,
   },
