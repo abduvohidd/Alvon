@@ -1,78 +1,143 @@
 ---
+import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
-import Title from "../shared/Title.astro";
 import Paragraph from "../shared/Paragraph.astro";
-import Team from "../shared/Team.astro";
-
-const ourTeams = [
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-  {
-    img: "/images/student.webp",
-    text: "Mohammod Ali",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet",
-  },
-];
+import Title from "../shared/Title.astro";
 ---
 
 <section>
-  <Container className="space-y-8 pt-32 lg:pt-36">
-    <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-      <span
-        class="absolute -left-6 md:left-[18rem] top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
-      ></span>
+  <Container className="space-y-10 md:sapce-y-12 pt-32 lg:pt-36">
+    <div class="text-center max-w-4xl mx-auto space-y-4">
+      <Title>Yorqin kelajakni yaratadigan kursingizni toping</Title>
+      <Paragraph>Eng yaxshi sarmoya - bu bilimga qilingan sarmoyadur</Paragraph>
     </div>
-    <span
-      class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
-    ></span>
-    <div class="text-center max-w-3xl mx-auto">
-      <Title>Blog</Title>
-
-      <Paragraph className="mt-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
-        vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida
-        massa.
-      </Paragraph>
-    </div>
-    <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
-      {
-        ourTeams.map((item) => {
-          return <Team {...item} />;
-        })
-      }
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <Service
+        href="arabic-language"
+        title="Arab tili darslari."
+        description="Kelajagingni arab tili bilan qurmoqchi bo'lgan insonlarga, kelajak quruvchilari bo'lgan ustozlarimiz xizmati taklif etamiz."
+      >
+        <span slot="icon">
+          <img
+            src="/images/arab.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="mathematics"
+        title="Matematika darslari."
+        description="Markazimizga tashrif buyuring va matematika faqat hisob-kitobdangina emasligining guvohi bo'ling."
+      >
+        <span slot="icon">
+          <img
+            src="/images/math.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="english-language"
+        title="Ingliz tili darslari."
+        description="Oliy o'quv yurtlari yoki chet elga chiqish yohud trenddagi sohalar uchun albatta ingliz tili talab etiladi."
+      >
+        <span slot="icon">
+          <img
+            src="/images/eng.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="russian-language"
+        title="Rus tili darslari."
+        description="Qiziqarli film yoki kitoblarni o'qimioqchi bo'lamiz-u o'zbek tilida bo'lmaydi. Bu muammoga esa bizning rus tili darslarimiz yechim bo'la oladi."
+      >
+        <span slot="icon">
+          <img
+            src="/images/rus.png "
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="pre-school"
+        title="Maktabgacha tayyo'rlov darslari."
+        description="Bu yoshdagi aksariyat bololarda: ko'p savol berish, qiziquvchanlik kabi hislatlar rivojlanadi. Bu paytda esa sizga 'Alvon' yordam beradi."
+      >
+        <span slot="icon">
+          <img
+            src="/images/logical.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="arabic-kids"
+        title="Arab tili kids."
+        description="Bolalaringizni arab tilida qiyinchiliklarsiz o‘qish, yozish va ravon gapirishini istaysizmi unda biz bilan ta'lim oling."
+      >
+        <span slot="icon">
+          <img
+            src="/images/alif.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="#"
+        title="IT"
+        description="Bolalaringizni arab tilida qiyinchiliklarsiz o‘qish, yozish va ravon gapirishini istaysizmi unda biz bilan ta'lim oling."
+      >
+        <span slot="icon">
+          <img
+            src="/images/psychology.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="#"
+        title="Mental arifmetika"
+        description="Bolalaringizni arab tilida qiyinchiliklarsiz o‘qish, yozish va ravon gapirishini istaysizmi unda biz bilan ta'lim oling."
+      >
+        <span slot="icon">
+          <img
+            src="/images/kit.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
+      <Service
+        href="#"
+        title="Med kurs"
+        description="Bolalaringizni arab tilida qiyinchiliklarsiz o‘qish, yozish va ravon gapirishini istaysizmi unda biz bilan ta'lim oling."
+      >
+        <span slot="icon">
+          <img
+            src="/images/information.png"
+            alt="not found img"
+            width="36"
+            height="36"
+          />
+        </span>
+      </Service>
     </div>
   </Container>
 </section>

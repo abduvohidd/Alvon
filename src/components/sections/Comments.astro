@@ -1,0 +1,106 @@
+---
+// import { t } from "i18next";
+// import { feedbacks } from "../static/data.json";
+
+const feedbacks = [
+  {
+    text: "Katta rahmat, Really I wish more videos. Very helpful. I am Egyptian working and living now in Uzbekistan and I started to learn Uzbek. lltimos continue.",
+    author: "Hossam Hassanein",
+    image: "/images/kit.png",
+  },
+  {
+    text: "Ўзбекистон ва ўзбек болаларимиз учин кандай зўр проект! Шу лоихани ташкилотчиларига ва хар бир шу сохада мехнат килаётган инсонларга таъзим киламан! Рахмат, бор булинглар! Роса хурсанд булдим лекин. Кандай яхши а, ўз тилингда хорижий тилларни ургансанг...",
+    author: "Шавкат Муродов",
+    image: "/images/kit.png",
+  },
+  {
+    text: "Darslar menga juda maqul! Bu til o'rganishda zo'r imkoniyat! Ana shunday onlayn darslardan barcha yoshlar foydalansa maqsadga muvofiq bo'lar edi. O'qituvchilarga ijodkorlarga katta raxmat! Boshlagan ishlariz xayrli bo'lsin!",
+    author: "Sanjarbek Kushbakov",
+    image: "/images/kit.png",
+  },
+];
+---
+
+<section class="relative">
+  <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
+    <span
+      class="absolute -left-44 md:-left-96 top-24 lg:top-32 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+    ></span>
+    <span
+      class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-orange-600 blur-xl opacity-80"
+    ></span>
+  </div>
+  <div
+    id="comments"
+    class="bg-cover mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 bg-transparent"
+  >
+    <div class="container">
+      <div class="flex flex-col w-full items-center justify-center">
+        <h1
+          class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl sm:text-start text-center"
+        >
+          O'QUVCHILARIMIZ FIKRLARI
+        </h1>
+
+        <div class="flex items-center justify-center mb-6 md:mb-0 mt-5">
+          {
+            new Array(5).fill(undefined).map(() => (
+              <span v-for="item in 5" class="text-[40px] text-orange-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"
+                  />
+                </svg>
+              </span>
+            ))
+          }
+        </div>
+
+        <div
+          class="flex items-center bg-transparent justify-around w-full gap-5 mb-10"
+        >
+          {
+            feedbacks.map((feedback, idx) => (
+              <div
+                class:list={[
+                  {
+                    "bg-transparent rounded-3xl flex-1 shrink-0 border dark:text-white flex-col p-6 hidden lg:block md:min-h-[500px] 2xl:min-h-[450px]  border border-box-border bg-box-bg shadow-lg shadow-box-shadow ":
+                      idx !== 1,
+                    "bg-transparent rounded-3xl flex-1 shrink-0 border dark:text-white flex-col p-6 md:mt-10 translate-y-20 border border-box-border bg-box-bg shadow-lg shadow-box-shadow ":
+                      idx == 1,
+                  },
+                ]}
+              >
+                <img
+                  src="/images/comment.png"
+                  class="text-orange-500"
+                  alt="not found image"
+                />
+                <p class="text-[24px] font-normal font-din-pro leading-10 mt-5 mb-5">
+                  {feedback.text}
+                </p>
+                <div class="flex items-center">
+                  <img
+                    loading="lazy"
+                    class="w-12 h-12 rounded-full"
+                    src={feedback.image}
+                    alt={feedback.author}
+                  />
+                  <h2 class="ml-5 text-orange-500 font-din-pro text-[20px]">
+                    {feedback.author}
+                  </h2>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
