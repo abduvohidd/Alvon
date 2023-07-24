@@ -1,5 +1,4 @@
 ---
-import Title from "../shared/Title.astro";
 import Container from "../shared/Container.astro";
 
 const users = [
@@ -34,24 +33,24 @@ const users = [
   <Container>
     <div id="" class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5">
       <div class="flex flex-col items-center justify-center">
-        <Title>
+        <h1
+          class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl sm:text-start text-center"
+        >
           <span class="text-orange-500">Alvon</span> bitiruvchilarining natijalri.
-        </Title>
+        </h1>
       </div>
 
-      <div class="overflow-x-hidden">
+      <div class="overflow-x-hidden mt-10">
         <div class="embla user">
           <ul class="embla__container">
             {
               users.map((item) => (
-                <li
-                  v-for="item in team"
-                  class=" embla__slide flex mt-10 sm:pl-2"
-                >
+                <li v-for="item in team" class=" embla__slide flex  sm:pl-2">
                   <div class="flex flex-col w-[17rem] h-[250px] items-center justify-center group  rounded-3xl bg-[#b1b0af]">
                     <img
                       alt="not found img"
                       src={item.img}
+                      loading="lazy"
                       class="w-full h-full rounded-3xl object-cover shrink-0"
                     />
                   </div>
