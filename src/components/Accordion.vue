@@ -78,18 +78,9 @@ const items = ref([
     active: false,
   },
   {
-    header: " ?",
-    content: "Content for Item 1",
-    active: false,
-  },
-  {
-    header: " ?",
-    content: "Content for Item 2",
-    active: false,
-  },
-  {
-    header: " ?",
-    content: "Content for Item 3",
+    header: "Kursni tanlashdan avval bilim darajasini qanday aniqlash mumkin?",
+    content:
+      "Shu maqsadda barcha yangi talabalarimiz uchun test sinovlari o’tkazamiz. Uning natijalariga ko’ra mutaxassislarimiz talabalarni guruhlarga ajratishadi. Avvalgi kurslarni tamomlagan talabamiz keyingi bosqichga o’ta olish yoki olmasligini ham xuddi shu usul orqali aniqlaymiz.",
     active: false,
   },
 ]);
