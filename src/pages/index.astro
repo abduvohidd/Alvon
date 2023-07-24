@@ -8,18 +8,19 @@ import Login from "../components/Login.vue";
 import AboutUs from "../components/sections/AboutUs.astro";
 import VideoUs from "../components/sections/VideoUs.astro";
 import Carausel from "../components/sections/Carausel.astro";
+import UserCarausel from "../components/sections/UserCarausel.astro";
 ---
 
 <Layout title="Education">
   <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
     <Hero />
-    <!-- <Brands/> -->
     <Services />
+    <Carausel />
     <VideoUs />
     <Features />
     <Faq />
     <AboutUs />
-    <Carausel />
+    <UserCarausel />
     <Login client:load />
   </main>
 </Layout>
