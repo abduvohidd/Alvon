@@ -77,8 +77,12 @@ const teams = [
   import AutoPlay from "embla-carousel-autoplay";
 
   const emblaNode = document.querySelector<HTMLElement>(".embla");
+  const autoplayOptions = {
+    stopOnInteraction: false,
+    delay: 2500,
+  };
   const options = { loop: true, align: "start" };
-  const plugins = [AutoPlay()];
+  const plugins = [AutoPlay(autoplayOptions)];
 
   const embla = EmblaCarousel(emblaNode, options, plugins);
   embla.on("select", () => {
