@@ -3,7 +3,7 @@ import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Team from "../shared/Team.astro";
-
+import { YouTube } from "@astro-community/astro-embed-youtube";
 const ourTeams = [
   {
     img: "/images/student.webp",
@@ -74,5 +74,15 @@ const ourTeams = [
         })
       }
     </div>
+  </Container>
+</section>
+
+<section>
+  <Container>
+    <YouTube
+      class="rounded-lg h-full mx-auto"
+      id="4aG34Gr264o"
+      poster="/images/hero-2.webp"
+    />
   </Container>
 </section>
