@@ -47,8 +47,9 @@ const users = [
               {
                 users.map((item) => (
                   <li v-for="item in team" class=" embla__slide flex  sm:pl-2">
-                    <div class="flex flex-col w-[17rem] h-[250px] items-center border justify-center group  rounded-3xl bg-[#b1b0af]">
+                    <div class="flex flex-col w-[17rem] h-[250px] cursor-pointer items-center border justify-center group  rounded-3xl bg-[#b1b0af]">
                       <img
+                        data-lightbox="roadtrip"
                         alt="not found img"
                         src={item.img}
                         loading="lazy"
