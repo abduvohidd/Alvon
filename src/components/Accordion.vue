@@ -67,8 +67,9 @@ const items = ref([
   },
   {
     header: "Darslar qanday metodlar yordamida o'tiladi ?",
-    content:
-      "“Kichik guruhlarda ishlash” metodi. Bu metodda ta’lim beruvchi tomonidan aniq ko‘rsatmalar beriladi kichik guruhlar esa topshiriqni bajarishga kirishadilar. Natijasi-muloqotga kirishish ko‘nikmasining takomillashishiga olib keladi. “Davra suhbati” metodi, bu metod berilgan muammo yoki savollar yuzasidan ta’lim oluvchilar tomonidan o‘z fikr-mulohazalarini bildirish orqali olib boriladigan o‘qitish metodidir.Natijasi -  ta’lim oluvchilar berilgan mavzu bo‘yicha o‘zlarining bilimlarini qisqa va aniq ifoda eta oladilar.",
+    content: `“Kichik guruhlarda ishlash” metodi. Bu metodda ta’lim beruvchi tomonidan aniq ko‘rsatmalar beriladi kichik guruhlar esa topshiriqni bajarishga kirishadilar.Natijasi - muloqotga kirishish ko‘nikmasining takomillashishiga olib keladi.
+              “Davra suhbati” metodi, bu metod berilgan muammo yoki savollar yuzasidan ta’lim oluvchilar tomonidan o‘z fikr - mulohazalarini bildirish orqali olib boriladigan o‘qitish metodidir.Natijasi - ta’lim oluvchilar berilgan mavzu bo‘yicha o‘zlarining bilimlarini qisqa va aniq ifoda eta oladilar.
+      `,
     active: false,
   },
   {
