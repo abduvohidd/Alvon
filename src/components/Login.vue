@@ -24,7 +24,7 @@ const lessons = ref([
 
 const handleForm = () => {
   axios.post(
-    "https://api.telegram.org/bot6350411149:AAFouN9lI1qD5AhHEGKfhamHHm_3EzmzQ2A/sendMessage",
+    "https://api.telegram.org/bot6312458538:AAEntEagx0B-xJmmK8hluU9g82M5xu6tnJI/sendMessage",
     {
       chat_id: -1001989077847,
       text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${value.value}`,
@@ -170,7 +170,7 @@ const handleForm = () => {
           </div>
           <button
             type="submit"
-            class="px-6 py-3 mt-10 mb-5 w-[60%] sm:w-[35%] md:w-[25%] flex justify-center rounded-full bg-[#1d4ed8] outline-none overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 hover:after:opacity-100 hover:after:scale-[2.5] border-transparent relative after:bg-orange-500 hover:border-orange-500"
+            class="px-6 py-3 mt-10 mb-5 w-[60%] sm:w-[35%] md:w-[25%] flex justify-center rounded-full bg-[#1d4ed8] outline-none overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 hover:after:opacity-100 hover:after:scale-[2.5] border-transparent relative after:bg-[#43e20e] hover:border-[#43e20e]"
           >
             <span class="flex relative z-[5] text-white"> Yuborish </span>
             <!-- <span class="flex sm:hidden relative z-[5]">

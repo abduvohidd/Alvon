@@ -10,7 +10,7 @@ const { href, text, className, variant } = Astro.props;
 
 const getThemeStyle = (variant: "primary" | "secondary") => {
   if (variant === "primary") {
-    return "bg-primary border-transparent relative after:bg-orange-600 hover:border-orange-600";
+    return "bg-primary border-transparent relative after:bg-[#43e20e] hover:border-[#43e20e]";
   }
   return "text-primary";
 };
