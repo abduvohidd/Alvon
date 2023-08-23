@@ -11,15 +11,21 @@ const text = ref("");
 const phone = ref("+998");
 const value = ref(null);
 const lessons = ref([
-  "Matematika",
-  "Ingilis Tili",
-  "Arab Tili",
-  "Rus Tili",
-  "Maktabgacha tayyo'rlov darslari",
+  "IT kurslar",
+  "Web dasturlash",
+  "Grafik dizayn",
+  "Arab tili",
+  "Arab tili ayollar uchun",
+  "Ingilis tili",
   "Arab tili kids",
-  "IT",
+  "Matematika",
+  "Rus tili",
+  "IELST",
+  "Turk tili",
+  "Kimyo-Biologiya",
+  "Maktabgacha tayyo'rlov darslari",
+  "Почемучка",
   "Mental arifmetika",
-  "Med kurs",
 ]);
 
 const handleForm = () => {

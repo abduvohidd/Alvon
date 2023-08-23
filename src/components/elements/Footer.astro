@@ -7,26 +7,26 @@ import Paragraph from "../shared/Paragraph.astro";
 const footerNav1 = [
   {
     itemText: "Odamlarning fikrlari",
-    itemLink: "#user",
+    itemLink: "#",
   },
   {
     itemText: "O'quv markazning afzalliklari",
-    itemLink: "#features",
+    itemLink: "#",
   },
   {
     itemText: "Ko'p so'raladigan savollar",
-    itemLink: "#faq",
+    itemLink: "#",
   },
   {
     itemText: "O'quv markazning yutuqlari",
-    itemLink: "#win",
+    itemLink: "#",
   },
 ];
 
 const footerCompany = [
   {
     itemText: "Jamoa",
-    itemLink: "/team",
+    itemLink: "#",
   },
   {
     itemText: "Xizmatlar",
@@ -34,11 +34,11 @@ const footerCompany = [
   },
   {
     itemText: "Biz haqimizda",
-    itemLink: "/about",
+    itemLink: "#",
   },
   {
     itemText: "Kurslar",
-    itemLink: "/blog",
+    itemLink: "#",
   },
 ];
 ---
@@ -84,14 +84,17 @@ const footerCompany = [
       <div class="col-span-1 lg:col-span-1 h-auto flex flex-col">
         <div class="h-full">
           <a href="#" class="relative flex items-center gap-3">
-            <span slot="icon" class="text-[#43e20e] text-2xl">
-              <!-- <img
-                src="/images/logo-subh.png"
+            <span
+              slot="icon"
+              class="text-[#43e20e] text-2xl flex items-center gap-4"
+            >
+              <img
+                src="/images/zakiy-logo.png"
                 alt="not found img"
-                width="120"
-                height="120"
-              /> -->
-              Zakiy Academy
+                width="50"
+                height="50"
+              />
+              <p class="text-white">Zakiy Academy</p>
             </span>
           </a>
           <Paragraph className={"mt-8 text-gray-600"}>
@@ -145,7 +148,7 @@ const footerCompany = [
           </a>
 
           <a
-            href="https://instagram.com/Zakiy_academy?igshid=NTc4MTIwNjQ2YQ=="
+            href="https://instagram.com/zakiy_academy_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
             class="transition hover:text-heading-1 hover:scale-105"
             target="_blank"
           >
