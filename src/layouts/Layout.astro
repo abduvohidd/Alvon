@@ -39,9 +39,7 @@ const { title } = Astro.props;
       let website = document.getElementById("body");
 
       setInterval(() => {
-        // loader.style.display = "none";
         loader.style.height = "0px";
-        // loader.style.width = "0px";
         website.style.display = "block";
       }, 3000);
     </script>
@@ -180,7 +178,7 @@ const { title } = Astro.props;
     width: 100%;
     position: relative;
     z-index: 100;
-    transition: height 1s ease-out;
+    transition: height 0.7s 0.5s ease-in-out;
   }
 
   #body {
