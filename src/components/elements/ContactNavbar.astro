@@ -1,0 +1,27 @@
+---
+import Container from "../shared/Container.astro";
+---
+
+<header class="inset-x-0 top-0 z-50 py-6 absolute">
+  <Container>
+    <nav class="w-full flex justify-center gap-6 relative">
+      <!-- logo -->
+      <div class="min-w-max inline-flex relative">
+        <a href="/" class="relative flex items-center gap-3">
+          <span
+            slot="icon"
+            class="text-[#43e20e] text-base flex items-center gap-2 font-bold"
+          >
+            <img
+              src="/images/zakiy-logo.png"
+              alt="not found img"
+              width="50"
+              height="50"
+            />
+            Zakiy Academy
+          </span>
+        </a>
+      </div>
+    </nav>
+  </Container>
+</header>

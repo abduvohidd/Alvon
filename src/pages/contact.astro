@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Contactlayout.astro";
+import Login from "../components/Login.vue";
+---
+
+<Layout title="Contact">
+  <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+    <Login client:load />
+  </main>
+</Layout>
+
+<style scoped>
+  #login {
+    margin-top: 5rem !important;
+  }
+</style>

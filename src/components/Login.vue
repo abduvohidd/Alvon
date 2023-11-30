@@ -10,6 +10,7 @@ import { vMaska } from "maska";
 const text = ref("");
 const phone = ref("+998");
 const value = ref(null);
+const value1 = ref(null);
 const lessons = ref([
   "IT kurslar",
   "Web dasturlash",
@@ -27,13 +28,14 @@ const lessons = ref([
   "Почемучка",
   "Mental arifmetika",
 ]);
+const times = ref(["08:00-14:00", "14:00-18:00", "18:00-21:00"]);
 
 const handleForm = () => {
   axios.post(
     "https://api.telegram.org/bot6312458538:AAEntEagx0B-xJmmK8hluU9g82M5xu6tnJI/sendMessage",
     {
       chat_id: -1001989077847,
-      text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${value.value}`,
+      text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${value.value}\n<b>Tanlagan Vaqti:</b> ${value1.value}`,
       parse_mode: "HTML",
     }
   );
@@ -41,6 +43,7 @@ const handleForm = () => {
   text.value = undefined;
   phone.value = "+998";
   value.value = undefined;
+  value1.value = undefined;
 
   toast.success("Xabaringiz yuborildi tez orada siz bilan bo'g'lanishadi.", {
     autoClose: 5000,
@@ -165,11 +168,44 @@ const handleForm = () => {
                 </span>
 
                 <Multiselect
-                  placeholder="Qiziqqan faningiz"
+                  placeholder="Fanlar"
                   required
                   v-model="value"
                   :options="lessons"
-                  class="bg-box-bg dark:text-white text-black h-full rounded-full w-[100%] z-50 py-1 bg-none border-none"
+                  class="whitespace-nowrap bg-box-bg dark:text-white text-black h-full rounded-full w-[100%] z-50 py-1 bg-none border-none"
+                />
+              </div>
+            </div>
+
+            <div class="flex items-center sm:flex-row gap-4 w-full">
+              <div
+                class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
+              >
+                <span class="min-w-max pr-2 border-r border-box-border">
+                  <svg
+                    width="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="#f7f2f2"
+                  >
+                    <path
+                      d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                      fill="#e3e3e3"
+                    ></path>
+                    <path
+                      d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z"
+                      fill="#e3e3e3"
+                    ></path>
+                  </svg>
+                </span>
+
+                <Multiselect
+                  placeholder="Qulay vaqt"
+                  required
+                  v-model="value1"
+                  :options="times"
+                  class="whitespace-nowrap bg-box-bg dark:text-white text-black h-full rounded-full w-[100%] z-40 py-1 bg-none border-none"
                 />
               </div>
             </div>
@@ -232,5 +268,32 @@ const handleForm = () => {
 input:focus {
   background-color: none !important;
   -webkit-appearance: none;
+  outline: none !important;
 }
+
+.is-active:focus {
+  background-color: none !important;
+  -webkit-appearance: none;
+  outline: none !important;
+}
+/* .multiselect:focus {
+  background-color: none !important;
+  -webkit-appearance: none;
+  outline: none !important;
+}
+.multiselect .multiselect-dropdown:focus {
+  background-color: none !important;
+  -webkit-appearance: none;
+  outline: none !important;
+}
+.multiselect .multiselect-dropdown::-webkit-scrollbar:focus {
+  background-color: none !important;
+  -webkit-appearance: none;
+  outline: none !important;
+}
+.multiselect .multiselect-fake-input:focus {
+  background-color: none !important;
+  -webkit-appearance: none;
+  outline: none !important;
+} */
 </style>
