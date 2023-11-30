@@ -13,14 +13,11 @@ const value = ref(null);
 const value1 = ref(null);
 const lessons = ref([
   "IT kurslar",
-  "Web dasturlash",
-  "Grafik dizayn",
-  "Arab tili",
-  "Arab tili ayollar uchun",
-  "Ingilis tili",
-  "Arab tili kids",
   "Matematika",
+  "Ingliz tili",
+  "Arab tili",
   "Rus tili",
+  "Arab tili kids",
   "IELST",
   "Turk tili",
   "Kimyo-Biologiya",
