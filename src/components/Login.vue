@@ -9,6 +9,7 @@ import { vMaska } from "maska";
 
 const text = ref("");
 const phone = ref("+998");
+const number = ref(null);
 const value = ref(null);
 const value1 = ref(null);
 const lessons = ref([
@@ -32,13 +33,14 @@ const handleForm = () => {
     "https://api.telegram.org/bot6312458538:AAEntEagx0B-xJmmK8hluU9g82M5xu6tnJI/sendMessage",
     {
       chat_id: -1001989077847,
-      text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${value.value}\n<b>Tanlagan Vaqti:</b> ${value1.value}`,
+      text: `<b>Ismi:</b> ${text.value}\n<b>Telofon Raqami:</b> ${phone.value}\n<b>Tanlagan Fani:</b> ${value.value}\n<b>Tanlagan Vaqti:</b> ${value1.value}\n<b>Yoshi:${number.value}</b>`,
       parse_mode: "HTML",
     }
   );
 
   text.value = undefined;
   phone.value = "+998";
+  number.value = undefined;
   value.value = undefined;
   value1.value = undefined;
 
@@ -101,6 +103,49 @@ const handleForm = () => {
                   required
                   placeholder="Ismingiz"
                   class="w-full py-3 outline-none rounded-full bg-box-bg pl-2"
+                />
+              </div>
+            </div>
+
+            <div class="flex items-center sm:flex-row gap-4 w-full">
+              <div
+                class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
+              >
+                <span class="min-w-max pr-2 border-r border-box-border">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </span>
+
+                <input
+                  type="number"
+                  id="number"
+                  min="4"
+                  max="60"
+                  v-model="number"
+                  autocomplete="off"
+                  required
+                  placeholder="Yosh"
+                  class="age w-full py-3 outline-none rounded-full bg-box-bg pl-2"
                 />
               </div>
             </div>
@@ -236,6 +281,15 @@ const handleForm = () => {
 </template>
 
 <style>
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .multiselect {
   background: none !important;
   border-radius: inherit !important;
